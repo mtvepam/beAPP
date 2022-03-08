@@ -3,9 +3,10 @@ include 'db_connect.php';
 
 $sql = "SELECT * FROM Weather.Days ORDER BY applicable_date";
 $result = mysqli_query($connect, $sql);
+$hname = getenv('HOSTNAME');
 
 echo '<h3> <b style="color:red"> Weather day-by-day log for Moscow city (Earth ID location: 2122265 ) </b> </h3>';
-echo "<h7>  Information has been provided by ".$getenv('HOSTNAME')." </b> </h7>";
+echo "<h7>  Information has been provided by ".$hname." </b> </h7>";
 echo '<h5>     *The table may contain data of previouse requests. Use Tab Config to clear DataBase </h5>';
 echo '<h7>  </h7>';
 
